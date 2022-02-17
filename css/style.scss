@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+$bio-color: #eee;
+$dark-cyan: hsl(185, 75%, 45%);
+$dark-gray: hsl(0, 0%, 59%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$white: #fff;
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+
+}
+.card-body{
+
+ height: 100vh;
+  align-items: center;
+  background-color: $dark-cyan;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 0px #ececec;
+  position:relative;
+
+  &__bgtop{
+    
+    align-items: center;
+	  height:100%;
+    width:100%;
+    background:	url(../images/bg-pattern-top.svg) no-repeat;
+    background-position: top -557px left -775px;
+  }
+
+  &__bgbottom{
+
+    align-items: center;
+    height:100%;
+    width:100%;
+    background: url(../images/bg-pattern-bottom.svg) no-repeat;
+    background-position: bottom -499px right -785px;
+  } 
+  
+  &__card {
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    height: 374px;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    width: 350px;
+
+    &__head {
+      align-items: center;
+      background-image: url(../images/bg-pattern-card.svg);
+      display: flex;
+      height: 140px;
+      width: 350px;
+    }
+
+    &__bio {
+      border-bottom: 1px solid $bio-color;
+      height: 145px;
+      width: 100%;
+
+      &-avatar {
+        background-image: url(../images/image-victor.jpg);
+        background-size: cover;
+        border-radius: 50%;
+        border: 5px solid white;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        top: -50px;
+        width: 100px;
+      }
+
+      &-avatar-desc {
+        position: relative;
+        top: -42px;
+      }
+
+      &-name {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 35px;
+        span {
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+
+      &-age {
+        margin-left:5px;
+      }
+
+      &-city {
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+
+    &__foot {
+      align-items: center;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      
+      &-col {
+      
+        &-number {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 26px;
+        }
+
+        &-textdesc {
+          font-size: 11px;
+          letter-spacing: 0.1em;
+        }
+      }    
+    }
+  }
+}
+
+
+@media (min-width: 780px) { 
+  .card-body{
+
+    &__bgtop{
+      background-position: top 802% left 108%;
+    }
+
+    &__bgbottom{ 
+      background-position: bottom 802% right 100%
+    } 
+
+  }
+
+ }
